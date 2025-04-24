@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Tic Tac Toe</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+
+    <body>
+        <div class="game-header">
+            <h1>Tic Tac Toe</h1>
+
+            <div class="controls">
+                <button onclick="setGameMode('2-player')">
+                    <i class="icon fas fa-users"></i>
+
+                    2 Players
+                </button>
+
+                <button onclick="showComputerOptions()">
+                    <i class="icon fas fa-robot"></i>
+
+                    vs Computer
+                </button>
+
+                <div class="difficulty-levels" id="difficultyLevels">
+                    <button
+                        data-difficulty="easy"
+                        onclick="setDifficulty('easy')">
+                        <i class="icon fas fa-baby"></i>
+
+                        Easy
+                    </button>
+
+                    <button
+                        data-difficulty="medium"
+                        onclick="setDifficulty('medium')">
+                        <i class="icon fas fa-user"></i>
+
+                        Medium
+                    </button>
+
+                    <button
+                        data-difficulty="hard"
+                        onclick="setDifficulty('hard')">
+                        <i class="icon fas fa-skull"></i>
+
+                        Hard
+                    </button>
+
+                    <button
+                        data-difficulty="god"
+                        onclick="setDifficulty('god')">
+                        <i class="icon fas fa-crown"></i>
+
+                        Hardest
+                    </button>
+                </div>
+
+                <div class="symbol-selector" id="symbolSelector">
+                    <button onclick="setPlayerSymbol('X')">
+                        <i class="icon fas fa-times"></i>
+
+                        Play X
+                    </button>
+
+                    <button onclick="setPlayerSymbol('O')" style="margin-left: 10px;">
+                        <i class="icon fas fa-circle"></i>
+
+                        Play O
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status" id="status">Select game mode</div>
+
+        <div class="board disabled" id="board">
+            <div class="cell" data-cell-index="0"></div>
+
+            <div class="cell" data-cell-index="1"></div>
+
+            <div class="cell" data-cell-index="2"></div>
+
+            <div class="cell" data-cell-index="3"></div>
+
+            <div class="cell" data-cell-index="4"></div>
+
+            <div class="cell" data-cell-index="5"></div>
+
+            <div class="cell" data-cell-index="6"></div>
+
+            <div class="cell" data-cell-index="7"></div>
+
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+
+        <button onclick="fullReset()" class="reset-btn">
+            <i class="icon fas fa-sync-alt"></i>
+
+            New Game
+        </button>
+
+        <script src="app.js"></script>
+    </body>
+</html>
